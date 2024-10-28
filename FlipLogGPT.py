@@ -13,7 +13,7 @@ load_dotenv()
 
 embeddings_model_name = os.environ.get("EMBEDDINGS_MODEL_NAME")
 persist_directory = os.environ.get('PERSIST_DIRECTORY')
-"""
+
 model_type = os.environ.get('MODEL_TYPE')
 model_path = os.environ.get('MODEL_PATH')
 model_n_ctx = os.environ.get('MODEL_N_CTX')
@@ -28,6 +28,7 @@ model_path = os.environ.get('./flipgpt/ggml-gpt4all-j-v1.3-groovy.bin')
 model_n_ctx = os.environ.get('2048')
 model_n_batch = 8
 target_source_chunks = 4
+"""
 from constants import CHROMA_SETTINGS
 
 def react_for_logs(query):
