@@ -28,16 +28,19 @@ from constants import CHROMA_SETTINGS
 
 
 load_dotenv()
-
-
+"""
 # Load environment variables
 persist_directory = os.environ.get('PERSIST_DIRECTORY')
 source_directory = os.environ.get('SOURCE_DIRECTORY', 'source_documents')
 embeddings_model_name = os.environ.get('EMBEDDINGS_MODEL_NAME')
 chunk_size = 500
 chunk_overlap = 50
-
-
+"""
+persist_directory = './vectorstore'
+source_directory = os.environ.get('SOURCE_DIRECTORY', 'source_documents')
+embeddings_model_name ="all-MiniLM-L6-v2"
+chunk_size = 500
+chunk_overlap = 50
 # Custom document loaders
 class MyElmLoader(UnstructuredEmailLoader):
     """Wrapper to fallback to text/plain when default does not work"""
