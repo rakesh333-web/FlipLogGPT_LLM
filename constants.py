@@ -5,7 +5,7 @@ from chromadb.config import Settings
 load_dotenv()
 
 # Define the folder for storing database
-PERSIST_DIRECTORY = './vectorstore'
+PERSIST_DIRECTORY = os.environ.get('PERSIST_DIRECTORY')
 
 # Define the Chroma settings
 CHROMA_SETTINGS = Settings(
